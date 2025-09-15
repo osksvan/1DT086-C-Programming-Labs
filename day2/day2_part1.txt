@@ -1,0 +1,6 @@
+This one required a bit of thought. Reading the example matrix was easy, but the real input data had different number of columns on each row.
+I solved that issue by checking the maximum number of columns in the real input data (8) and always tried to read 8 numbers from each row, when failing
+ a read I filled up the rest of the row with INT_MAX to be able to see them as blanks later.
+
+Checking which lines were "safe" was easy, just compare each value with the previous on the line. The first and second value of each row 
+determined if the values should be increasing or decreasing, and then all values were checked to be within +-3 of the previous one.

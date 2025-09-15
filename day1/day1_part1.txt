@@ -1,0 +1,12 @@
+For day one, you got a big list of numbers in two columns, and I had to read them from file. 
+While I could have declared a static array of the values, I wanted to read them from file, 
+because that is easier than modifying the list of numbers by hand. It also allowed
+me to alternate between the example inputs and the real inputs, for debugging. 
+Interacting with files was simple, as I've done it before in both C, C#, Java an Python - open fp, read, close fp.
+
+The first tricky part was reading out the data, at first I thought to read from each row twice, once for each number on the row, 
+but then found that the fscanf function supports reading multiple values at once.
+
+The second tricky part was using the qsort function, which itself is easy, but I had to refresh my pointer knowledge to write the compare function for it.
+I wanted to sort the arrays before calculating the differences because that meant that the elements at index n in the arrays were always the n:th smallest.
+Otherwise I would have had to loop through the entire length of the array multiple times and replace the then-smallest value with null/INT_MAX and handle that.

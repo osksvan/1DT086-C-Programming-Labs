@@ -1,0 +1,4 @@
+Part 2 of day 1 was just chaning the summation part to loop through the two arrays in two nestled loops.
+The first loop is used to go through the first array, picking out each number as the number to look for in the second array.
+The second loop goes through the second array in order to see how many times the number occurs in the second array.
+Then it adds the_number * number_of_occurences to the total sum.
